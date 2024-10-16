@@ -72,3 +72,11 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# remove lock file
+yarn.lock
+/yarn.lock
+Podfile.lock
+/Podfile.lock
+package-lock.json
+/package-lock.json
