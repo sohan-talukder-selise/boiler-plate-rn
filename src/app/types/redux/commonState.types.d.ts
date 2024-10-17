@@ -1,5 +1,5 @@
 import {PayloadAction} from '@reduxjs/toolkit';
-import {_objectOfKey, _uid} from '../common.types';
+import {_objectOfKey} from '../common.types';
 
 export type _CustomPayload<T> = PayloadAction<T>;
 export type _CustomAction<T> = PayloadAction<T>;
@@ -13,10 +13,10 @@ interface _apiResponse {
 }
 interface _unformattedApiResponse {
   data: any;
-  extraData?: any;
+  extraData?: unknown;
   message: string;
   success: boolean;
-  responseCode: any;
+  responseCode: string | number;
 }
 
 interface _commonStatesP {
@@ -36,28 +36,27 @@ interface _commonStatesP {
 }
 
 interface _commonReducerP {
-  isGetting: Function;
-  isGettingSuccess: Function;
-  isGettingError: Function;
-  isGettingMore: Function;
-  isRefresh: Function;
-  isStateUpdate: Function;
-  queryChange: Function;
-  addAction: Function;
-  deleteAction: Function;
-  updateAction: Function;
-  clearAction?: Function;
+  isGetting?: Function;
+  isGettingSuccess?: Function;
+  isGettingError?: Function;
+  isGettingMore?: Function;
+  isRefresh?: Function;
+  isStateUpdate?: Function;
+  queryChange?: Function;
+  addAction?: Function;
+  deleteAction?: Function;
+  updateAction?: Function;
+  clearAction: Function;
 }
 interface _moduleReducers extends _commonReducerP {}
 /* common reducer payload */
 interface _isGetting {
-  page?: number | string;
-  perPage?: number | string;
+  page?: number;
+  perPage?: number;
   query?: string;
   advancedQuery?: _objectOfKey;
-  direction: 'asc' | 'desc';
+  direction?: 'asc' | 'desc';
   needPagination?: boolean;
-  withoutIds?: Array<_uid>;
 }
 
 export type {

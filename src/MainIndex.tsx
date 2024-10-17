@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 import configStore from './app/redux/store';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {globalStyles} from './app/assets/styles/global.style.asset';
-import {RealmProvider} from '@realm/react';
+import {AppProvider, RealmProvider} from '@realm/react';
 import realmConfig from './app/packages/realm/realmConfig';
 const MainIndex = () => {
   // TODO: Add a custom theme in a different hook / file
@@ -20,22 +20,24 @@ const MainIndex = () => {
       // secondary: 'yellow',
     },
   };
-
+  const appId = 'boiler-plate';
   return (
-    <SafeAreaProvider>
-      <Provider store={configStore}>
-        <RealmProvider {...realmConfig}>
-          <PaperProvider theme={theme}>
-            <GestureHandlerRootView style={globalStyles.flex1}>
-              <NavigationContainer>
-                <RouterIndex />
-                <BottomSheetIndex />
-              </NavigationContainer>
-            </GestureHandlerRootView>
-          </PaperProvider>
-        </RealmProvider>
-      </Provider>
-    </SafeAreaProvider>
+    <AppProvider id={appId}>
+      <SafeAreaProvider>
+        <Provider store={configStore}>
+          <RealmProvider {...realmConfig}>
+            <PaperProvider theme={theme}>
+              <GestureHandlerRootView style={globalStyles.flex1}>
+                <NavigationContainer>
+                  <RouterIndex />
+                  <BottomSheetIndex />
+                </NavigationContainer>
+              </GestureHandlerRootView>
+            </PaperProvider>
+          </RealmProvider>
+        </Provider>
+      </SafeAreaProvider>
+    </AppProvider>
   );
 };
 

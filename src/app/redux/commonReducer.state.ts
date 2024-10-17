@@ -4,6 +4,7 @@ import {_CustomAction, _commonStatesP} from '../types/redux/commonState.types';
 const commonReducers = {
   isGetting: (state: _commonStatesP) => {
     state.isLoading = true;
+    state.firstRender = true;
   },
   isGettingSuccess: (
     state: _commonStatesP,

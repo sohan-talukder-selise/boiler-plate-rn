@@ -1,41 +1,39 @@
-import {Realm} from '@realm/react';
+import {Realm, createRealmContext} from '@realm/react';
 import modelsName from './modelsName';
 
-class CollectionsModel extends Realm.Object<CollectionsModel> {
+class CollectionsModel extends Realm.Object {
   _id!: Realm.BSON.ObjectId;
   name!: string;
   description?: string;
   createdAt!: Date;
   updatedAt!: Date;
 
-  // Define the Image schema
-  static ImageSchema: Realm.ObjectSchema = {
-    name: modelsName.Image,
-    properties: {
-      _id: 'objectId',
-      uri: 'string',
-    },
-  };
-
-  // Define the Collections schema
-  static CollectionsSchema: Realm.ObjectSchema = {
-    // The name of the schema
-    name: modelsName.Collections,
+  static schema: Realm.ObjectSchema = {
+    name: modelsName.Collections, // Register the schema name correctly
     primaryKey: '_id',
     properties: {
-      _id: 'objectId',
-      title: 'string',
-      date: 'date',
-      totalItems: 'string',
-      images: {
-        type: 'list',
-        objectType: 'Image', // Use the name of the schema, not a direct reference
-      },
+      _id: 'string',
+      name: 'string',
+      description: 'string?', // Optional field
+      createdAt: 'date',
+      updatedAt: 'date',
+      // images: {
+      //   type: 'list',
+      //   objectType: 'string', // Reference Image schema by its name
+      // },
     },
   };
-
-  // Assign the schema for the model
-  static schema: Realm.ObjectSchema = CollectionsModel.CollectionsSchema;
 }
 
-export default CollectionsModel;
+// Image schema definition
+const ImageSchema: Realm.ObjectSchema = {
+  name: 'Image',
+  properties: {
+    _id: 'objectId',
+    uri: 'string',
+  },
+};
+export const RealmContext = createRealmContext({
+  schema: [CollectionsModel],
+});
+export {CollectionsModel, ImageSchema};
