@@ -16,7 +16,7 @@ import {
   customPadding,
 } from '../../../assets/styles/global.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import isEmpty from '../../../helper/utilities/isEmpty.utility';
 import EmptyContent from '../../empty-content/EmptyContent.component';
 import {useIsMounted} from '../../../helper/hooks/useIsMounted.hook';
@@ -83,14 +83,17 @@ const EachOption: React.FC<optionsProps> = ({
       activeOpacity={0.7}
       onPress={onPress}
       style={[globalStyles.rowBetween, {...customPadding(10, 0, 10, 0)}]}>
-      <Text style={[typographies.interMedium14, {color: colors.black}]}>
+      <Text
+        style={[typographies.interMedium14, {color: customTheme.colors.black}]}>
         {titleFieldFormatter
           ? titleFieldFormatter(item)
           : titleField === 'FULL__DATA'
           ? item
           : item[titleField]}
       </Text>
-      {select && <CheckIcon fill={colors.pink} height={16} width={16} />}
+      {select && (
+        <CheckIcon fill={customTheme.colors.pink} height={16} width={16} />
+      )}
     </TouchableOpacity>
   );
 };
@@ -221,7 +224,7 @@ const BottomSheetSelect: React.FC<componentProps> = ({
                 numberOfLines={1}
                 style={[
                   typographies.interSemiBold16,
-                  {color: colors.black},
+                  {color: customTheme.colors.black},
                   globalStyles.flexShrink1,
                 ]}>
                 {title}

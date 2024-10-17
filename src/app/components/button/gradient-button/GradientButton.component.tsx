@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {_gradientButton} from '../types/interface';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 import LinearGradient from 'react-native-linear-gradient';
@@ -14,7 +14,7 @@ import LinearGradient from 'react-native-linear-gradient';
 const GradientButton: React.FC<_gradientButton> = ({
   text = '',
   borderRadius = 16,
-  gradient = [colors.orange2, colors.orange],
+  gradient = [customTheme.colors.orange2, customTheme.colors.orange],
   style = {},
   textColor,
   textStyle = {},
@@ -35,12 +35,12 @@ const GradientButton: React.FC<_gradientButton> = ({
         locations={[0, 1]}>
         {icon}
         {isLoading ? (
-          <ActivityIndicator color={colors.pureWhite} />
+          <ActivityIndicator color={customTheme.colors.pureWhite} />
         ) : (
           <Text
             style={[
               typographies.interSemiBold16,
-              {color: textColor || colors.white},
+              {color: textColor || customTheme.colors.white},
               textStyle,
             ]}
             numberOfLines={1}>

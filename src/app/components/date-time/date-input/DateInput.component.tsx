@@ -11,7 +11,7 @@ import React, {useState} from 'react';
 import {DateTimePickerEvent} from '@react-native-community/datetimepicker';
 import moment from 'moment-timezone';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import {
   customPadding,
@@ -65,7 +65,7 @@ const DateInput: React.FC<dateInputProps> = ({
             <Text
               style={[
                 typographies.interSemiBold16,
-                {color: colors.black},
+                {color: customTheme.colors.black},
                 labelStyle,
               ]}>
               {label}
@@ -78,7 +78,7 @@ const DateInput: React.FC<dateInputProps> = ({
           activeOpacity={0.6}
           style={[
             styles.container,
-            {borderColor: colors.grey3},
+            {borderColor: customTheme.colors.grey3},
             containerStyle,
           ]}>
           <View style={[globalStyles.flexRow]}>
@@ -87,14 +87,22 @@ const DateInput: React.FC<dateInputProps> = ({
               style={[
                 typographies.interNormal16,
                 globalStyles.flexShrink1,
-                {color: !date ? colors.grey3 : colors.black},
+                {
+                  color: !date
+                    ? customTheme.colors.grey3
+                    : customTheme.colors.black,
+                },
               ]}
               numberOfLines={1}>
               {moment(date).format('DD-MM-yyyy') || placeholder}
             </Text>
           </View>
           <View style={{transform: [{rotate: '270deg'}]}}>
-            <ArrowDownIcon height={20} width={20} fill={colors.pink} />
+            <ArrowDownIcon
+              height={20}
+              width={20}
+              fill={customTheme.colors.pink}
+            />
           </View>
         </TouchableOpacity>
       </View>
@@ -114,7 +122,7 @@ export default DateInput;
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     ...customPadding(17, 16, 17, 16),
     borderWidth: 1,
     width: '100%',

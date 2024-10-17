@@ -3,7 +3,7 @@ import {
   customPadding,
   customMargin,
 } from '../../assets/styles/global.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 export const webViewStyle = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -13,7 +13,7 @@ export const webViewStyle = StyleSheet.create({
   },
   center: {flexDirection: 'row', alignItems: 'center'},
   title: {
-    color: colors.black,
+    color: customTheme.colors.black,
   },
   url: {
     flexDirection: 'row',
@@ -22,7 +22,7 @@ export const webViewStyle = StyleSheet.create({
   },
   urlText: {
     ...customMargin(0, 0, 0, 4),
-    color: colors.grey,
+    color: customTheme.colors.grey,
   },
   relative: {position: 'relative'},
   loaderView: {

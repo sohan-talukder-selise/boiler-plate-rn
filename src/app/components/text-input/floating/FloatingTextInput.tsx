@@ -18,7 +18,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 
 export interface _floatingLabelInputProps extends TextInputProps {
   label?: string | number;
@@ -120,7 +120,7 @@ const FloatingTextInput = ({
         style={[styles.input, {width: rightIcon ? '90%' : '100%'}, inputStyle]}
         value={val}
         ref={inputRef}
-        selectionColor={colors.black}
+        selectionColor={customTheme.colors.black}
         textAlignVertical="center"
         onFocus={onFocusHandler}
         onBlur={onBlurHandler}

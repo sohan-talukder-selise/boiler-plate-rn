@@ -1,13 +1,13 @@
 import React from 'react';
 import Svg, {Path} from 'react-native-svg';
 import rs from '../styles/responsiveSize.style.asset';
-import {colors} from '../styles/colors.style.asset';
+import {customTheme} from '../styles/colors.style.asset';
 import {_iconProps} from '../../types/icons.types';
 
 const LeftArrowIcon: React.FC<_iconProps> = ({
   width = rs(24),
   height = rs(24),
-  fill = colors.orange,
+  fill = customTheme.colors.orange,
 }) => (
   <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
     <Path

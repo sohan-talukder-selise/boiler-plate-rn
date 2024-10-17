@@ -7,7 +7,7 @@ import {loginStyles} from './styles/login.style';
 import GradientButton from '../../components/button/gradient-button/GradientButton.component';
 import {typographies} from '../../assets/styles/typographies.style.asset';
 import {globalStyles} from '../../assets/styles/global.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {screens} from '../../routes/routeName.routes';
 import ClickableText from '../../components/clickable-text/ClickableText.component';
 import {useNavigation} from '@react-navigation/native';
@@ -29,15 +29,26 @@ const RegistrationEmail = () => {
         <Text style={[typographies.interSemiBold20, {marginTop: rs(60)}]}>
           Continue with Email
         </Text>
-        <Text style={[typographies.interNormal16, {color: colors.grey}]}>
+        <Text
+          style={[
+            typographies.interNormal16,
+            {color: customTheme.colors.grey},
+          ]}>
           Already a member?{' '}
           <ClickableText
             text="Login"
             onPress={() => navigation.navigate(screens.login as never)}
-            style={{...typographies.interSemiBold16, color: colors.pink}}
+            style={{
+              ...typographies.interSemiBold16,
+              color: customTheme.colors.pink,
+            }}
           />
         </Text>
-        <Text style={[typographies.interNormal12, {color: colors.grey}]}>
+        <Text
+          style={[
+            typographies.interNormal12,
+            {color: customTheme.colors.grey},
+          ]}>
           Please enter your valid email. We will send you a 4-digit code to
           verify your account.
         </Text>

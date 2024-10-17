@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {
   customPadding,
   globalStyles,
@@ -49,9 +49,12 @@ const DateBottomSheet: React.FC<_props> = ({callBack}) => {
       <CalendarPicker
         startFromMonday={true}
         allowRangeSelection={true}
-        todayBackgroundColor={getHexaOpacityColorCode(colors.pink, 0.6)}
-        selectedDayColor={colors.pink}
-        selectedDayTextColor={colors.pureWhite}
+        todayBackgroundColor={getHexaOpacityColorCode(
+          customTheme.colors.pink,
+          0.6,
+        )}
+        selectedDayColor={customTheme.colors.pink}
+        selectedDayTextColor={customTheme.colors.pureWhite}
         onDateChange={onDateChange}
       />
     </View>
@@ -95,7 +98,7 @@ const RangeDate: React.FC<dateTimeInputProps> = ({
         <Text
           style={[
             typographies.interSemiBold16,
-            {color: colors.black, marginBottom: rs(8)},
+            {color: customTheme.colors.black, marginBottom: rs(8)},
           ]}>
           {label}
         </Text>
@@ -103,21 +106,33 @@ const RangeDate: React.FC<dateTimeInputProps> = ({
       <TouchableOpacity
         onPress={handleOpenModal}
         activeOpacity={0.6}
-        style={[styles.container, {borderColor: colors.grey3}, containerStyle]}>
+        style={[
+          styles.container,
+          {borderColor: customTheme.colors.grey3},
+          containerStyle,
+        ]}>
         <View style={[globalStyles.flexRow]}>
           {leftIcon}
           <Text
             style={[
               typographies.interNormal16,
               globalStyles.flexShrink1,
-              {color: !date ? colors.grey3 : colors.black},
+              {
+                color: !date
+                  ? customTheme.colors.grey3
+                  : customTheme.colors.black,
+              },
             ]}
             numberOfLines={1}>
             {date || placeholder}
           </Text>
         </View>
         <View style={{transform: [{rotate: '270deg'}]}}>
-          <ArrowDownIcon height={20} width={20} fill={colors.pink} />
+          <ArrowDownIcon
+            height={20}
+            width={20}
+            fill={customTheme.colors.pink}
+          />
         </View>
       </TouchableOpacity>
     </View>
@@ -125,7 +140,7 @@ const RangeDate: React.FC<dateTimeInputProps> = ({
 };
 const styles = StyleSheet.create({
   container: {
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     ...customPadding(17, 16, 17, 16),
     borderWidth: 1,
     width: '100%',

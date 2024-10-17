@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {customPadding} from '../../../assets/styles/global.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 export const onboardingStyles = StyleSheet.create({
   container: {
@@ -13,9 +13,9 @@ export const onboardingStyles = StyleSheet.create({
   logoContainer: {
     height: rs(89),
     width: rs(87),
-    backgroundColor: colors.light1,
+    backgroundColor: customTheme.colors.light1,
     borderWidth: 1.55,
-    borderColor: colors.light2,
+    borderColor: customTheme.colors.light2,
     borderRadius: 500,
     justifyContent: 'center',
     alignItems: 'center',

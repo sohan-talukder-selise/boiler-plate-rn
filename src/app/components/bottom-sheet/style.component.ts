@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../assets/ts/core.data';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 
@@ -19,7 +19,7 @@ const bottomSheetStyles = StyleSheet.create({
     height: 'auto',
     maxHeight: '80%',
     minHeight: '15%',
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     borderTopStartRadius: 32,
     borderTopEndRadius: 32,
     paddingTop: 14,
@@ -29,7 +29,7 @@ const bottomSheetStyles = StyleSheet.create({
     alignSelf: 'center',
     width: rs(36),
     height: 5,
-    backgroundColor: colors.grey5,
+    backgroundColor: customTheme.colors.grey5,
   },
 });
 export default bottomSheetStyles;

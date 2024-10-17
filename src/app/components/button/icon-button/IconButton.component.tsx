@@ -1,14 +1,14 @@
 import {TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {_iconButton} from '../types/interface';
 
 const IconButton: React.FC<_iconButton> = ({
   icon,
   onPress,
-  bgColor = colors.white,
-  borderColor = colors.grey3,
+  bgColor = customTheme.colors.white,
+  borderColor = customTheme.colors.grey3,
   style,
   disabled,
 }) => {

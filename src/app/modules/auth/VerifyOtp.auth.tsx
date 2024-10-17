@@ -5,7 +5,7 @@ import Container from '../../provider/app/Container.layout';
 import Header from '../../components/header/Header.component';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import ClickableText from '../../components/clickable-text/ClickableText.component';
 import OTPInput from '../../components/text-input/otp-input/OtpInput.component';
 import EmptyContent from '../../components/empty-content/EmptyContent.component';
@@ -33,10 +33,14 @@ const VerifyOtp: React.FC<_props> = ({
         isLoading ? statusBar.lightContent : statusBar.darkContent
       }
       activityBgColor={
-        isLoading ? getHexaOpacityColorCode(colors.black, 0.6) : colors.white
+        isLoading
+          ? getHexaOpacityColorCode(customTheme.colors.black, 0.6)
+          : customTheme.colors.white
       }
       statusBarBg={
-        isLoading ? getHexaOpacityColorCode(colors.black, 0.6) : colors.white
+        isLoading
+          ? getHexaOpacityColorCode(customTheme.colors.black, 0.6)
+          : customTheme.colors.white
       }>
       {isLoading && (
         <View style={styles.overLey}>
@@ -48,17 +52,28 @@ const VerifyOtp: React.FC<_props> = ({
         <Text style={[typographies.interSemiBold20, {marginTop: rs(60)}]}>
           Please verify your email or phone number.
         </Text>
-        <Text style={[typographies.interNormal12, {color: colors.grey}]}>
+        <Text
+          style={[
+            typographies.interNormal12,
+            {color: customTheme.colors.grey},
+          ]}>
           We’ve sent an OTP to your phone number, verify it to continue.
         </Text>
         <Text style={{opacity: resend ? 1 : 0}}>
-          <Text style={[typographies.interNormal16, {color: colors.grey}]}>
+          <Text
+            style={[
+              typographies.interNormal16,
+              {color: customTheme.colors.grey},
+            ]}>
             Don't have it?{' '}
           </Text>
           <ClickableText
             text="Resend"
             onPress={resendOtp}
-            style={{...typographies.interSemiBold16, color: colors.pink}}
+            style={{
+              ...typographies.interSemiBold16,
+              color: customTheme.colors.pink,
+            }}
           />
         </Text>
       </View>

@@ -6,13 +6,13 @@ import {
 } from 'react-native';
 import React from 'react';
 import {_buttonProps} from '../types/interface';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 
 const SolidButton: React.FC<_buttonProps> = ({
   text = '',
-  borderRadius = 16,
+  borderRadius = 12,
   bgColor,
   style = {},
   textColor,
@@ -22,7 +22,11 @@ const SolidButton: React.FC<_buttonProps> = ({
   isLoading,
   disabled,
 }) => {
-  const styles = buttonStyles(borderRadius, bgColor || colors.orange, icon);
+  const styles = buttonStyles(
+    borderRadius,
+    bgColor || customTheme.colors.primary,
+    icon,
+  );
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -31,12 +35,12 @@ const SolidButton: React.FC<_buttonProps> = ({
       style={[styles.container, style]}>
       {icon}
       {isLoading ? (
-        <ActivityIndicator color={colors.pureWhite} />
+        <ActivityIndicator color={customTheme.colors.pureWhite} />
       ) : (
         <Text
           style={[
             typographies.interSemiBold16,
-            {color: textColor || colors.white},
+            {color: textColor || customTheme.colors.text_dark},
             textStyle,
           ]}
           numberOfLines={1}>

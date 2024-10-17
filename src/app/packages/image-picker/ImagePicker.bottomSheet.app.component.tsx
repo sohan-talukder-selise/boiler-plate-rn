@@ -12,7 +12,7 @@ import getHexaOpacityColorCode from '../../helper/utilities/getHexaOpacityColor.
 import CameraIcon from '../../assets/icons/Camera.icon.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import GalleryFillIcon from '../../assets/icons/GalleryFill.icon.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 
 const ImagePickerBottomSheet: React.FC<{
   success: (params: any) => void;
@@ -48,7 +48,7 @@ const ImagePickerBottomSheet: React.FC<{
           style={[
             typographies.interSemiBold16,
             globalStyles.flexShrink1,
-            {color: colors.black},
+            {color: customTheme.colors.black},
           ]}>
           Image Picker
         </Text>
@@ -59,7 +59,11 @@ const ImagePickerBottomSheet: React.FC<{
           activeOpacity={0.6}
           onPress={handleOpenCamera}>
           <View style={styles.imageContainer}>
-            <CameraIcon height={rs(40)} width={rs(40)} fill={colors.pink} />
+            <CameraIcon
+              height={rs(40)}
+              width={rs(40)}
+              fill={customTheme.colors.pink}
+            />
           </View>
           <Text style={typographies.interMedium14}>Open Camera</Text>
         </TouchableOpacity>
@@ -71,7 +75,7 @@ const ImagePickerBottomSheet: React.FC<{
             <GalleryFillIcon
               height={rs(40)}
               width={rs(40)}
-              fill={colors.pink}
+              fill={customTheme.colors.pink}
             />
           </View>
           <Text style={typographies.interMedium14}>Open Gallery</Text>
@@ -97,7 +101,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: rs(88),
     width: rs(88),
-    backgroundColor: getHexaOpacityColorCode(colors.grey3, 0.3),
+    backgroundColor: getHexaOpacityColorCode(customTheme.colors.grey3, 0.3),
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12,

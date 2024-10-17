@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {Text, TextStyle, View, ViewStyle} from 'react-native';
 import {globalStyles} from '../../assets/styles/global.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 interface _props {
   style?: ViewStyle;
   rightComponent?: ReactElement;
@@ -43,7 +43,7 @@ const Header: React.FC<_props> = ({
           <Text
             style={[
               typographies.interSemiBold16,
-              {color: colors.black},
+              {color: customTheme.colors.black},
               textStyle,
             ]}>
             {text}

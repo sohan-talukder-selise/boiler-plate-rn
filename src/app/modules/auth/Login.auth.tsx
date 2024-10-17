@@ -3,7 +3,7 @@ import React from 'react';
 import Container from '../../provider/app/Container.layout';
 import ClickableText from '../../components/clickable-text/ClickableText.component';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import FloatingTextInput from '../../components/text-input/floating/FloatingTextInput';
 import PasswordTextInput from '../../components/text-input/floating/PasswordTextInput';
@@ -38,15 +38,26 @@ const LoginIndex = () => {
           <Text style={[typographies.interSemiBold20, {marginTop: rs(60)}]}>
             Sign in to continue
           </Text>
-          <Text style={[typographies.interNormal16, {color: colors.grey}]}>
+          <Text
+            style={[
+              typographies.interNormal16,
+              {color: customTheme.colors.grey},
+            ]}>
             Not a member?{' '}
             <ClickableText
               text="Sign up"
               onPress={() => navigation.navigate(screens.registration as never)}
-              style={{...typographies.interSemiBold16, color: colors.pink}}
+              style={{
+                ...typographies.interSemiBold16,
+                color: customTheme.colors.pink,
+              }}
             />
           </Text>
-          <Text style={[typographies.interNormal12, {color: colors.grey}]}>
+          <Text
+            style={[
+              typographies.interNormal12,
+              {color: customTheme.colors.grey},
+            ]}>
             Please enter your email and password to log in.
           </Text>
         </View>
@@ -79,7 +90,11 @@ const LoginIndex = () => {
                 defaultValue={defaultValues.check}
                 onChange={(value: boolean) => (rememberMe.current = value)}
               />
-              <Text style={[typographies.interNormal12, {color: colors.black}]}>
+              <Text
+                style={[
+                  typographies.interNormal12,
+                  {color: customTheme.colors.black},
+                ]}>
                 Remember me
               </Text>
             </View>

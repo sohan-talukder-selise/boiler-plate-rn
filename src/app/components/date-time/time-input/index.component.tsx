@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import {DateTimePickerEvent} from '@react-native-community/datetimepicker';
 import moment from 'moment-timezone';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import {
   customPadding,
@@ -52,7 +52,7 @@ const TimePickerInput: React.FC<dateTimeInputProps> = ({
           <Text
             style={[
               typographies.interSemiBold20,
-              {color: colors.black, marginBottom: rs(6)},
+              {color: customTheme.colors.black, marginBottom: rs(6)},
             ]}>
             {label}
           </Text>
@@ -66,12 +66,16 @@ const TimePickerInput: React.FC<dateTimeInputProps> = ({
               typographies.interSemiBold20,
               globalStyles.flexShrink1,
               globalStyles.flexGrow1,
-              {color: !date ? colors.grey3 : colors.grey},
+              {
+                color: !date
+                  ? customTheme.colors.grey3
+                  : customTheme.colors.grey,
+              },
             ]}
             numberOfLines={1}>
             {moment(date).format('hh:mm A') || placeholder}
           </Text>
-          <ArrowDownIcon fill={colors.grey3} />
+          <ArrowDownIcon fill={customTheme.colors.grey3} />
         </TouchableOpacity>
       </View>
       {show && (
@@ -94,6 +98,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
   },
 });
