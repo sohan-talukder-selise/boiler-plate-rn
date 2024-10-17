@@ -1,0 +1,360 @@
+{
+  "collections/list": {
+    "payload": {
+      "page": 1,
+      "perPage": 20,
+      "needPagination": false
+    },
+    "method": "POST",
+    "success": true,
+    "message": "Got content list data",
+    "data": [
+      {
+        "_id": "1",
+        "title": "Starry Night",
+        "date": "2024-10-01",
+        "totalItems": "4",
+        "images": [
+          {
+            "_id": "img1",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/350px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+          },
+          {
+            "_id": "img2",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/350px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+          },
+          {
+            "_id": "img3",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/350px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+          },
+          {
+            "_id": "img4",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/350px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "2",
+        "title": "Mona Lisa",
+        "date": "2024-09-15",
+        "totalItems": "3",
+        "images": [
+          {
+            "_id": "img2",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+          },
+          {
+            "_id": "img2",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+          },
+          {
+            "_id": "img2",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "3",
+        "title": "The Persistence of Memory",
+        "date": "2024-08-10",
+        "totalItems": "2",
+        "images": [
+          {
+            "_id": "img3",
+            "uri": "https://uploads1.wikiart.org/00475/images/salvador-dali/w1siziisijm4njq3mcjdlfsiccisimnvbnzlcnqilcitcxvhbgl0esa5mcatcmvzaxplidiwmdb4mjawmfx1mdazzsjdxq.jpg!Large.jpg"
+          },
+          {
+            "_id": "img3",
+            "uri": "https://uploads1.wikiart.org/00475/images/salvador-dali/w1siziisijm4njq3mcjdlfsiccisimnvbnzlcnqilcitcxvhbgl0esa5mcatcmvzaxplidiwmdb4mjawmfx1mdazzsjdxq.jpg!Large.jpg"
+          },
+          {
+            "_id": "img3",
+            "uri": "https://uploads1.wikiart.org/00475/images/salvador-dali/w1siziisijm4njq3mcjdlfsiccisimnvbnzlcnqilcitcxvhbgl0esa5mcatcmvzaxplidiwmdb4mjawmfx1mdazzsjdxq.jpg!Large.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "4",
+        "title": "The Scream",
+        "date": "2024-07-25",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img4",
+            "uri": "https://www.edvardmunch.org/assets/img/paintings/the-scream.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "5",
+        "title": "Girl with a Pearl Earring",
+        "date": "2024-06-14",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img5",
+            "uri": "https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "6",
+        "title": "The Last Supper",
+        "date": "2024-05-12",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img6",
+            "uri": "https://theartchi.com/cdn/shop/articles/Screenshot_2023-07-12_180740.jpg?v=1703224039&width=2048"
+          }
+        ]
+      },
+      {
+        "_id": "7",
+        "title": "The Birth of Venus",
+        "date": "2024-04-18",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img7",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/800px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "8",
+        "title": "The Creation of Adam",
+        "date": "2024-03-21",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img8",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "9",
+        "title": "American Gothic",
+        "date": "2024-02-28",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img9",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/1200px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "10",
+        "title": "Whistler's Mother",
+        "date": "2024-01-30",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img10",
+            "uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1200px-Whistlers_Mother_high_res.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "11",
+        "title": "The Night Watch",
+        "date": "2024-10-05",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img11",
+            "uri": "https://example.com/images/the-night-watch.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "12",
+        "title": "Liberty Leading the People",
+        "date": "2024-09-10",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img12",
+            "uri": "https://example.com/images/liberty-leading-the-people.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "13",
+        "title": "The Kiss",
+        "date": "2024-08-05",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img13",
+            "uri": "https://example.com/images/the-kiss.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "14",
+        "title": "Las Meninas",
+        "date": "2024-07-01",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img14",
+            "uri": "https://example.com/images/las-meninas.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "15",
+        "title": "The Arnolfini Portrait",
+        "date": "2024-06-10",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img15",
+            "uri": "https://example.com/images/arnolfini-portrait.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "16",
+        "title": "Water Lilies",
+        "date": "2024-05-15",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img16",
+            "uri": "https://example.com/images/water-lilies.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "17",
+        "title": "The Hay Wain",
+        "date": "2024-04-20",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img17",
+            "uri": "https://example.com/images/the-hay-wain.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "18",
+        "title": "The School of Athens",
+        "date": "2024-03-16",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img18",
+            "uri": "https://example.com/images/school-of-athens.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "19",
+        "title": "The Great Wave off Kanagawa",
+        "date": "2024-02-23",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img19",
+            "uri": "https://example.com/images/great-wave-kanagawa.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "20",
+        "title": "Guernica",
+        "date": "2024-01-18",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img20",
+            "uri": "https://example.com/images/guernica.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "21",
+        "title": "The Flower Carrier",
+        "date": "2023-12-25",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img21",
+            "uri": "https://example.com/images/flower-carrier.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "22",
+        "title": "The Old Guitarist",
+        "date": "2023-11-15",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img22",
+            "uri": "https://example.com/images/old-guitarist.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "23",
+        "title": "The Garden of Earthly Delights",
+        "date": "2023-10-05",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img23",
+            "uri": "https://example.com/images/garden-of-earthly-delights.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "24",
+        "title": "Napoleon Crossing the Alps",
+        "date": "2023-09-18",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img24",
+            "uri": "https://example.com/images/napoleon-crossing-alps.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "25",
+        "title": "The Blue Boy",
+        "date": "2023-08-29",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img25",
+            "uri": "https://example.com/images/blue-boy.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "26",
+        "title": "Self-Portrait with Bandaged Ear",
+        "date": "2023-07-12",
+        "totalItems": "1",
+        "images": [
+          {
+            "_id": "img26",
+            "uri": "https://example.com/images/self-portrait-bandaged-ear.jpg"
+          }
+        ]
+      },
+      {
+        "_id": "27",
+        "title": "Dance at Le Moulin de la Galette",
+        "date": "2023-06-20",
+        "totalItems": "1"
+      }
+    ]
+  }
+}

@@ -10,12 +10,12 @@ import CustomActivityBar from '../components/activity-bar/ActivityBar.component'
 const Container: React.FC<_container> = ({
   children,
   containerStyle = {},
-  bg = customTheme.colors.light1,
+  bg = customTheme.colors.surface_dark,
   showActivity = false,
   showHeader = true,
-  statusBarBg = customTheme.colors.light1,
-  activityBgColor = customTheme.colors.light1,
-  statusBarStyle = statusBar.darkContent,
+  statusBarBg = customTheme.colors.surface_dark,
+  activityBgColor = customTheme.colors.surface_dark,
+  statusBarStyle = statusBar.lightContent,
   ph = 0,
 }) => {
   return (

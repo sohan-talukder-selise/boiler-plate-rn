@@ -5,6 +5,7 @@ import AddIcon from '../icons/AddIcon.assets';
 import EmptyTabScreen from '../../components/empty-content/EmptyTabScreen';
 import {_bottomTabInterface} from '../../components/bottom-tab/interface';
 import Dashboard from '../../modules/dashboard';
+import CollectionIndex from '../../modules/collections';
 const bottomTabDropdown: _bottomTabInterface[] = [
   {
     Icon: HomeIcon,
@@ -14,7 +15,7 @@ const bottomTabDropdown: _bottomTabInterface[] = [
   {
     Icon: CartIcon,
     route: screens.profile,
-    Component: EmptyTabScreen,
+    Component: CollectionIndex,
   },
   {
     Icon: AddIcon,

@@ -10,7 +10,7 @@ const BottomTabBarIcon: React.FC<
   return (
     <View style={bottomTabStyle.iconContainer}>
       <Icon
-        fill={focused ? customTheme.colors.pink : customTheme.colors.grey}
+        fill={focused ? customTheme.colors.primary : customTheme.colors.grey}
       />
     </View>
   );

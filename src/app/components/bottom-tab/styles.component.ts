@@ -8,7 +8,7 @@ const bottomTabStyle = StyleSheet.create({
     flexDirection: 'row',
     borderTopColor: customTheme.colors.grey3,
     borderTopWidth: 1,
-    backgroundColor: customTheme.colors.white,
+    backgroundColor: customTheme.colors.elevation8,
     // height: rs(85),
     alignSelf: 'baseline',
     // flexBasis: 1 / 2,

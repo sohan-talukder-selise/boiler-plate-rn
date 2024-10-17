@@ -40,15 +40,16 @@ const BottomTab: React.FC<types> = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: customTheme.colors.pink,
-        tabBarInactiveTintColor: customTheme.colors.pink,
+        tabBarActiveTintColor: customTheme.colors.primary,
+        tabBarInactiveTintColor: customTheme.colors.primary,
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          borderTopColor: customTheme.colors.grey3,
+          borderTopColor: customTheme.colors.elevation8,
           borderTopWidth: 1,
           alignItems: 'center',
           ...customPadding(0, 20, 10, 20),
           height: rs(72),
+          backgroundColor: customTheme.colors.surface_dark,
         },
       }}>
       {renderTabs()}
