@@ -4,9 +4,8 @@ import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {collectionStates} from '../../../redux/allSelector.state';
 import {getCollectionsList} from '../../../redux/features/collections/collections.slice.m';
-import {useQuery, useRealm} from '@realm/react';
+import {useRealm} from '@realm/react';
 import modelsName from '../../../controllers/models/modelsName';
-import {CollectionsModel} from '../../../controllers/models/Collections.model';
 
 const useCollections = () => {
   const navigation = useNavigation();
@@ -30,9 +29,10 @@ const useCollections = () => {
           updatedAt: new Date(),
         });
       });
-    setTimeout(() => {
-      console.log(realm.objects(modelsName.Collections));
-    }, 5000);
+    list.length > 0 &&
+      setTimeout(() => {
+        console.log(realm.objects(modelsName.Collections));
+      }, 5000);
   }, [list]);
   return {
     navigation,

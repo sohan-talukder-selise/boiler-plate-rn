@@ -33,5 +33,6 @@ export const customTheme = {
     grey7: '#F3F3F3',
     grey8: '#D1CFCF',
     grey9: '#E5E3E2',
+    elevation8: '#383838',
   },
 };
