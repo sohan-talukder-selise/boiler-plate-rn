@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
+import {View} from 'react-native';
+import WebView from 'react-native-webview';
+import {globalStyles} from '../../assets/styles/global.style.asset';
+import Container from '../../layout/Container.layout';
+import EmptyContent from '../empty-content/EmptyContent.component';
 import WebViewHeader from './WebViewHeader';
 import {webViewStyle} from './style';
-import {View} from 'react-native';
-import Container from '../../layout/Container.layout';
-import {globalStyles} from '../../assets/styles/global.style.asset';
-import WebView from 'react-native-webview';
-import EmptyContent from '../empty-content/EmptyContent.component';
-import {messages} from '../../controllers/api/root-api-handler/const.root-api';
+// import {messages} from '../../controllers/api/root-api-handler/const.root-api';
 type Route = {
   params: {
     title?: string;
@@ -26,7 +26,7 @@ const CustomWebView: React.FC<{route: Route}> = ({
           <WebView
             source={{uri: url}}
             style={globalStyles.flex1}
-            onLoadProgress={({nativeEvent}) => {
+            onLoadProgress={({nativeEvent}: {nativeEvent: any}) => {
               setLoading(nativeEvent.progress);
             }}
             onError={() => {}}

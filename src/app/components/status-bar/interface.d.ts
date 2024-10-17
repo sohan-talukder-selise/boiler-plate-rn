@@ -1,5 +1,5 @@
 import {StatusBarStyle} from 'react-native';
-import {customTheme} from './../../assets/styles/colors.style.asset';
+// import {customTheme} from './../../assets/styles/colors.style.asset';
 interface _statusBarStyle {
   height: number;
   bgColor: string;
@@ -11,4 +11,4 @@ interface _statusBar {
   bgColor?: colors;
   extraHeight?: number;
 }
-export type {_statusBarStyle, _statusBar};
+export type {_statusBar, _statusBarStyle};
