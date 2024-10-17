@@ -1,0 +1,14 @@
+# Custom regex pattern for commit message (e.g., must start with # followed by a number and a colon)
+commit_regex='^#\d+: .+'
+
+# Get the commit message
+commit_message=$(cat "$1")
+
+# Check if the commit message matches the pattern
+if ! echo "$commit_message" | grep -qE "$commit_regex"; then
+  echo "Error: Invalid commit message format."
+  echo "Your commit message should start with an issue number, like: '#123: your commit message'"
+  exit 1
+fi
+
+yarn commitlint --edit "$1"
