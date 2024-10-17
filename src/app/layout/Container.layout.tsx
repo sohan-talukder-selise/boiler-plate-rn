@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {colors} from '../assets/styles/colors.style.asset';
+import {customTheme} from '../assets/styles/colors.style.asset';
 import {globalStyles} from '../assets/styles/global.style.asset';
 import {statusBar} from '../assets/styles/properties.asset';
 import {_container} from './interface';
@@ -10,11 +10,11 @@ import CustomActivityBar from '../components/activity-bar/ActivityBar.component'
 const Container: React.FC<_container> = ({
   children,
   containerStyle = {},
-  bg = colors.light1,
+  bg = customTheme.colors.light1,
   showActivity = false,
   showHeader = true,
-  statusBarBg = colors.light1,
-  activityBgColor = colors.light1,
+  statusBarBg = customTheme.colors.light1,
+  activityBgColor = customTheme.colors.light1,
   statusBarStyle = statusBar.darkContent,
   ph = 0,
 }) => {

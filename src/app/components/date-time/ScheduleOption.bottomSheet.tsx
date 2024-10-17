@@ -9,7 +9,7 @@ import {
 } from '../../assets/styles/global.style.asset';
 import LeftArrowIcon from '../../assets/icons/LeftArrow.icon.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import moment from 'moment-timezone';
 interface _props {
@@ -45,7 +45,7 @@ const ScheduleOption: React.FC<_props> = ({
           numberOfLines={1}
           style={[
             typographies.interSemiBold16,
-            {color: colors.black},
+            {color: customTheme.colors.black},
             globalStyles.flexShrink1,
           ]}>
           {label}

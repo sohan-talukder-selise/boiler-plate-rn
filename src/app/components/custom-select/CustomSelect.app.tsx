@@ -11,7 +11,7 @@ import React, {ReactElement, useEffect, useState} from 'react';
 import BottomSheetSelect from '../bottom-sheet/select';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {
   customPadding,
   globalStyles,
@@ -92,7 +92,7 @@ const CustomSelect: React.FC<_props> = ({
           <Text
             style={[
               typographies.interSemiBold16,
-              {color: colors.black},
+              {color: customTheme.colors.black},
               labelStyle,
             ]}>
             {label}
@@ -110,7 +110,9 @@ const CustomSelect: React.FC<_props> = ({
             globalStyles.flexShrink1,
             globalStyles.flexGrow1,
             {
-              color: !value ? colors.grey4 : colors.black,
+              color: !value
+                ? customTheme.colors.grey4
+                : customTheme.colors.black,
             },
           ]}
           numberOfLines={1}>
@@ -121,7 +123,11 @@ const CustomSelect: React.FC<_props> = ({
             : value?.[titleField]) || placeholder}
         </Text>
         <View style={{transform: [{rotate: '270deg'}]}}>
-          <ArrowDownIcon height={20} width={20} fill={colors.pink} />
+          <ArrowDownIcon
+            height={20}
+            width={20}
+            fill={customTheme.colors.pink}
+          />
         </View>
       </TouchableOpacity>
     </View>
@@ -133,7 +139,7 @@ export default CustomSelect;
 const styles = StyleSheet.create({
   textContainer: {
     borderWidth: 1,
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     flexDirection: 'row',
     gap: 8,
     ...customPadding(17, 16, 17, 16),

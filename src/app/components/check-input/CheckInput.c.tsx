@@ -3,7 +3,7 @@ import React from 'react';
 import CustomSwitch from '../switch/CustomSwitch';
 import {typographies} from '../../assets/styles/typographies.style.asset';
 import {globalStyles} from '../../assets/styles/global.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 interface props {
   label?: string;
@@ -25,7 +25,7 @@ const CheckInput: React.FC<props> = ({
         globalStyles.rowBetween,
         {
           borderBottomWidth: rs(1.1),
-          borderBottomColor: colors.light2,
+          borderBottomColor: customTheme.colors.light2,
           paddingBottom: rs(14),
         },
         style,
@@ -34,7 +34,7 @@ const CheckInput: React.FC<props> = ({
         style={[
           typographies.interMedium16,
           globalStyles.flexShrink1,
-          {color: colors.black},
+          {color: customTheme.colors.black},
         ]}>
         {label}
       </Text>

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styles from '../floating/styles';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {globalStyles} from '../../../assets/styles/global.style.asset';
 
 interface _floatingLabelInputProps
@@ -74,7 +74,7 @@ const MultiTextInputWithIcon = ({
         placeholder={placeholder}
         style={[styles.inputWithIcon, {height}, inputStyle]}
         value={val}
-        selectionColor={colors.black}
+        selectionColor={customTheme.colors.black}
         textAlignVertical="center"
         onFocus={onFocusHandler}
         onBlur={onBlurHandler}

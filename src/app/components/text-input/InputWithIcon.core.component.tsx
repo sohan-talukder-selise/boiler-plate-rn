@@ -10,7 +10,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {
   customPadding,
   globalStyles,
@@ -71,7 +71,7 @@ const InputWithIcon: React.FC<_props> = ({
           <Text
             style={[
               typographies.interMedium14,
-              {color: colors.black},
+              {color: customTheme.colors.black},
               labelStyle,
             ]}>
             {label}
@@ -86,7 +86,7 @@ const InputWithIcon: React.FC<_props> = ({
           numberOfLines={1}
           onChangeText={handleOnChange}
           placeholder={placeholder}
-          placeholderTextColor={colors.grey}
+          placeholderTextColor={customTheme.colors.grey}
           defaultValue={defaultValue?.toString()}
           {...inputProps}
         />
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     gap: 12,
     borderRadius: 14,
     borderWidth: 1,
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     ...customPadding(0, 16, 0, 16),
     flexDirection: 'row',
     alignItems: 'center',
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   input: {
     ...typographies.searchInput,
-    color: colors.grey,
+    color: customTheme.colors.grey,
     flexGrow: 1,
     flex: 1,
     paddingVertical: rs(14),

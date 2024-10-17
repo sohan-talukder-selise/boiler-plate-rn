@@ -7,7 +7,7 @@ import {
   customPadding,
   globalStyles,
 } from '../../assets/styles/global.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 
 interface _props {
   text: string;
@@ -39,7 +39,9 @@ const ItemSelect: React.FC<_props> = ({
         globalStyles.flexRow,
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          borderColor: isSelect ? colors.pink : colors.grey3,
+          borderColor: isSelect
+            ? customTheme.colors.pink
+            : customTheme.colors.grey3,
           borderWidth: 1,
           ...customPadding(9, 16, 9, 16),
           borderRadius: 16,

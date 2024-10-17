@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Platform, StatusBar} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import statusBarStyle from './style';
 import {_statusBar} from './interface';
@@ -9,7 +9,7 @@ import {statusBar} from '../../assets/styles/properties.asset';
 const CustomStatusBar: React.FC<_statusBar> = ({
   barStyle = statusBar.lightContent,
   showHeader = true,
-  bgColor = colors.transparent,
+  bgColor = customTheme.colors.transparent,
   extraHeight = 0,
 }) => {
   const {top} = useSafeAreaInsets();
@@ -25,7 +25,7 @@ const CustomStatusBar: React.FC<_statusBar> = ({
   }
   if (!showHeader) {
     if (Platform.OS === 'android') {
-      statusBarProps.backgroundColor = colors.transparent;
+      statusBarProps.backgroundColor = customTheme.colors.transparent;
     }
     return <StatusBar {...statusBarProps} />;
   }

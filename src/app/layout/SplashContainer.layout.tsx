@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, ViewStyle} from 'react-native';
 import CustomStatusBar from '../components/status-bar/CustomStatusBar.component';
-import {colors} from '../assets/styles/colors.style.asset';
+import {customTheme} from '../assets/styles/colors.style.asset';
 import {globalStyles} from '../assets/styles/global.style.asset';
 import {statusBar} from '../assets/styles/properties.asset';
 interface _props {
@@ -17,11 +17,12 @@ const SplashContainer: React.FC<_props> = ({
   return (
     <View style={globalStyles.flex1}>
       <CustomStatusBar
-        bgColor={colors.transparent}
+        bgColor={customTheme.colors.transparent}
         showHeader={false}
         barStyle={barStyle ?? 'dark-content'}
       />
-      <View style={[styles(colors.white).container, containerStyle]}>
+      <View
+        style={[styles(customTheme.colors.white).container, containerStyle]}>
         {children}
       </View>
     </View>

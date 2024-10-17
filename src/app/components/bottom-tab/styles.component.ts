@@ -1,14 +1,14 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import {customPadding} from '../../assets/styles/global.style.asset';
 
 const bottomTabStyle = StyleSheet.create({
   barContainer: {
     flexDirection: 'row',
-    borderTopColor: colors.grey3,
+    borderTopColor: customTheme.colors.grey3,
     borderTopWidth: 1,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     // height: rs(85),
     alignSelf: 'baseline',
     // flexBasis: 1 / 2,

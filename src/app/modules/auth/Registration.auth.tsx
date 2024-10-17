@@ -7,7 +7,7 @@ import rs from '../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
 import GradientButton from '../../components/button/gradient-button/GradientButton.component';
 import SolidButton from '../../components/button/solid-button/SolidButton.component';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import IconButton from '../../components/button/icon-button/IconButton.component';
 import {globalStyles} from '../../assets/styles/global.style.asset';
 import {loginStyles} from './styles/login.style';
@@ -36,7 +36,10 @@ const Registration = () => {
             navigation.navigate(screens.registrationEmail as never)
           }
         />
-        <SolidButton text="Continue With Phone" bgColor={colors.black} />
+        <SolidButton
+          text="Continue With Phone"
+          bgColor={customTheme.colors.black}
+        />
       </View>
       <View style={styles.bottom}>
         <View style={loginStyles.continueContainer}>
@@ -56,11 +59,17 @@ const Registration = () => {
         </View>
         <View style={[globalStyles.flexRow, styles.bottomText]}>
           <ClickableText
-            style={{...typographies.interNormal14, color: colors.orange}}
+            style={{
+              ...typographies.interNormal14,
+              color: customTheme.colors.orange,
+            }}
             text="Terms of use"
           />
           <ClickableText
-            style={{...typographies.interNormal14, color: colors.orange}}
+            style={{
+              ...typographies.interNormal14,
+              color: customTheme.colors.orange,
+            }}
             text="Privacy Policy"
           />
         </View>

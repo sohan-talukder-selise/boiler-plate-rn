@@ -4,7 +4,7 @@ import {
   customPadding,
   globalStyles,
 } from '../../../assets/styles/global.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 
 interface _eachItemProps {
@@ -24,7 +24,9 @@ const EachItem: React.FC<_eachItemProps> = ({onChange, select, item}) => {
         styles.itemContainer,
         {
           backgroundColor:
-            item.value === select?.value ? colors.pink : colors.lintPinkBg,
+            item.value === select?.value
+              ? customTheme.colors.pink
+              : customTheme.colors.lintPinkBg,
         },
       ]}>
       <Text
@@ -32,7 +34,10 @@ const EachItem: React.FC<_eachItemProps> = ({onChange, select, item}) => {
           typographies.interNormal14,
           styles.textCenter,
           {
-            color: item.value === select?.value ? colors.white : colors.black,
+            color:
+              item.value === select?.value
+                ? customTheme.colors.white
+                : customTheme.colors.black,
           },
         ]}>
         {item.name}
@@ -77,7 +82,7 @@ const styles = StyleSheet.create({
     gap: 13,
     ...customPadding(4, 4, 4, 4),
     borderRadius: 4,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     marginTop: 20,
   },
   itemContainer: {

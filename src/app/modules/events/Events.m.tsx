@@ -2,7 +2,7 @@ import {FlatList, Text, View} from 'react-native';
 import React from 'react';
 import InputWithIcon from '../../components/text-input/InputWithIcon.core.component';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {
   customPadding,
   globalStyles,
@@ -14,9 +14,16 @@ import Container from '../../layout/Container.layout';
 
 const Events = () => {
   return (
-    <Container bg={colors.lintPinkBg} statusBarBg={colors.lintPinkBg} ph={20}>
+    <Container
+      bg={customTheme.colors.lintPinkBg}
+      statusBarBg={customTheme.colors.lintPinkBg}
+      ph={20}>
       <View style={[globalStyles.flexRow, {gap: rs(20)}]}>
-        <Text style={[typographies.interSemiBold24, {color: colors.pink}]}>
+        <Text
+          style={[
+            typographies.interSemiBold24,
+            {color: customTheme.colors.pink},
+          ]}>
           Events
         </Text>
         <InputWithIcon

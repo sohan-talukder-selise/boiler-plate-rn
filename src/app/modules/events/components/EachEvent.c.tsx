@@ -4,7 +4,7 @@ import ImagePreview from '../../../components/image-preview/Index.component';
 import CalenderIcon from '../../../assets/icons/Calender.icon.asset';
 import moment from 'moment-timezone';
 import ClockIcon from '../../../assets/icons/Clock.svg';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import {
@@ -43,7 +43,7 @@ const EachEvent = () => {
           numberOfLines={1}
           style={[
             typographies.interNormal14,
-            {color: colors.black, marginBottom: rs(12)},
+            {color: customTheme.colors.black, marginBottom: rs(12)},
           ]}>
           Beach running requires considerably more muscular effort from your
           feet and legs and produces more stress on your muscles and ligaments.
@@ -51,14 +51,26 @@ const EachEvent = () => {
         <View
           style={[globalStyles.flexRow, {marginBottom: rs(20), gap: rs(20)}]}>
           <View style={[globalStyles.flexRow, {gap: rs(4)}]}>
-            <CalenderIcon height={18} width={18} fill={colors.grey4} />
-            <Text style={[typographies.interNormal12, {color: colors.grey4}]}>
+            <CalenderIcon
+              height={18}
+              width={18}
+              fill={customTheme.colors.grey4}
+            />
+            <Text
+              style={[
+                typographies.interNormal12,
+                {color: customTheme.colors.grey4},
+              ]}>
               {moment().format('MMMM DD')}
             </Text>
           </View>
           <View style={[globalStyles.flexRow, {gap: rs(4)}]}>
-            <ClockIcon height={18} width={18} fill={colors.grey4} />
-            <Text style={[typographies.interNormal12, {color: colors.grey4}]}>
+            <ClockIcon height={18} width={18} fill={customTheme.colors.grey4} />
+            <Text
+              style={[
+                typographies.interNormal12,
+                {color: customTheme.colors.grey4},
+              ]}>
               {moment().format('MMMM DD')}
             </Text>
           </View>
@@ -84,7 +96,7 @@ const EachEvent = () => {
                 style={[
                   typographies.interSemiBold14,
                   {
-                    color: colors.white,
+                    color: customTheme.colors.white,
                   },
                 ]}>
                 +{list.slice(4).length}
@@ -107,7 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 500,
     overflow: 'hidden',
     position: 'relative',
-    borderColor: colors.white,
+    borderColor: customTheme.colors.white,
   },
   image: {
     width: '100%',
@@ -119,8 +131,8 @@ const styles = StyleSheet.create({
     borderRadius: 500,
     overflow: 'hidden',
     position: 'relative',
-    borderColor: colors.white,
-    backgroundColor: colors.pink,
+    borderColor: customTheme.colors.white,
+    backgroundColor: customTheme.colors.pink,
     borderWidth: 2,
     zIndex: 666,
     marginLeft: -14,
@@ -131,7 +143,7 @@ const styles = StyleSheet.create({
     width: '100%',
     ...customPadding(8, 19, 8, 8),
     borderRadius: 8,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     gap: 8,
   },
   width: {width: '40%'},

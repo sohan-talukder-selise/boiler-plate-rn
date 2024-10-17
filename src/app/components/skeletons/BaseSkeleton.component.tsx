@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import {Animated, DimensionValue, Platform, ViewStyle} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 
 interface baseSkeletonProps {
   width?: DimensionValue;
@@ -44,7 +44,7 @@ const BaseSkeleton: React.FC<baseSkeletonProps> = ({
           opacity: opacity.current,
           height: height,
           width: width,
-          backgroundColor: bgColor ? bgColor : colors.light2,
+          backgroundColor: bgColor ? bgColor : customTheme.colors.light2,
           borderRadius: borderRadius,
         },
         style as ViewStyle,

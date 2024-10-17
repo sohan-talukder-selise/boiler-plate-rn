@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import rs from './responsiveSize.style.asset';
-import {colors} from './colors.style.asset';
+import {customTheme} from './colors.style.asset';
 
 export const globalStyles = StyleSheet.create({
   relativeContainer: {flex: 1, position: 'relative'},
@@ -38,7 +38,7 @@ export const globalStyles = StyleSheet.create({
   heightFull: {height: '100%'},
   alignJustifyCenter: {alignItems: 'center', justifyContent: 'center'},
   shadow: {
-    shadowColor: colors.pink,
+    shadowColor: customTheme.colors.pink,
     shadowOffset: {
       width: 0,
       height: 5,
@@ -46,7 +46,7 @@ export const globalStyles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 2.62,
     elevation: 5,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     borderRadius: 16,
   },
 });

@@ -1,12 +1,12 @@
 import React from 'react';
 import Svg, {Path} from 'react-native-svg';
-import {colors} from '../styles/colors.style.asset';
+import {customTheme} from '../styles/colors.style.asset';
 import {_iconProps} from '../../types/icons.types';
 
 const CheckIcon: React.FC<_iconProps> = ({
   width = 24,
   height = 24,
-  fill = colors.pink,
+  fill = customTheme.colors.pink,
 }) => (
   <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
     <Path

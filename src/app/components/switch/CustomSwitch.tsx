@@ -2,7 +2,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Animated, Pressable, StyleSheet} from 'react-native';
 import {nativeDriver} from '../../assets/styles/properties.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 interface _customSwitch {
   value?: boolean;
   onPress?: (params1: boolean, params2: string) => void;
@@ -12,10 +12,10 @@ interface _customSwitch {
 }
 const CustomSwitch: React.FC<_customSwitch> = ({
   value = false,
-  activeColor = colors.orange,
+  activeColor = customTheme.colors.orange,
   onPress = () => {},
   name,
-  bgColor = colors.grey2,
+  bgColor = customTheme.colors.grey2,
 }) => {
   const valueRef = useRef(false);
   const [show, setShow] = useState<boolean>(value);
@@ -53,7 +53,7 @@ const CustomSwitch: React.FC<_customSwitch> = ({
         <Animated.View
           style={[
             styles.circleStyle,
-            {backgroundColor: colors.white},
+            {backgroundColor: customTheme.colors.white},
             {
               transform: [
                 {
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     borderRadius: 36.5,
   },
   shadowValue: {
-    shadowColor: colors.black,
+    shadowColor: customTheme.colors.black,
     shadowOffset: {
       width: 0,
       height: 2,

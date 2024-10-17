@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import {
   customPadding,
@@ -55,7 +55,7 @@ const SelectDateTime: React.FC<dateTimeInputProps> = ({
         <Text
           style={[
             typographies.interSemiBold16,
-            {color: colors.black, marginBottom: rs(8)},
+            {color: customTheme.colors.black, marginBottom: rs(8)},
           ]}>
           {label}
         </Text>
@@ -63,14 +63,22 @@ const SelectDateTime: React.FC<dateTimeInputProps> = ({
       <TouchableOpacity
         onPress={handleOpenModal}
         activeOpacity={0.6}
-        style={[styles.container, {borderColor: colors.grey3}, containerStyle]}>
+        style={[
+          styles.container,
+          {borderColor: customTheme.colors.grey3},
+          containerStyle,
+        ]}>
         <View style={[globalStyles.flexRow]}>
           {leftIcon}
           <Text
             style={[
               typographies.interNormal16,
               globalStyles.flexShrink1,
-              {color: !date ? colors.grey3 : colors.black},
+              {
+                color: !date
+                  ? customTheme.colors.grey3
+                  : customTheme.colors.black,
+              },
             ]}
             numberOfLines={1}>
             {(defaultValue === date
@@ -79,7 +87,11 @@ const SelectDateTime: React.FC<dateTimeInputProps> = ({
           </Text>
         </View>
         <View style={{transform: [{rotate: '270deg'}]}}>
-          <ArrowDownIcon height={20} width={20} fill={colors.pink} />
+          <ArrowDownIcon
+            height={20}
+            width={20}
+            fill={customTheme.colors.pink}
+          />
         </View>
       </TouchableOpacity>
     </View>
@@ -90,7 +102,7 @@ export default SelectDateTime;
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     ...customPadding(17, 16, 17, 16),
     borderWidth: 1,
     width: '100%',

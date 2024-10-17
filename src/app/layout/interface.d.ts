@@ -1,5 +1,5 @@
 import {statusBar} from '../assets/styles/properties.asset';
-import {colors} from '../assets/styles/colors.style.asset';
+import {customTheme} from '../assets/styles/colors.style.asset';
 import {StyleProp, ViewStyle} from 'react-native';
 
 interface _container {

@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import {DateTimePickerEvent} from '@react-native-community/datetimepicker';
 import moment from 'moment-timezone';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import {
   customPadding,
@@ -51,7 +51,7 @@ const DatePickerInput: React.FC<dateInputProps> = ({
           <Text
             style={[
               typographies.interSemiBold20,
-              {color: colors.black, marginBottom: rs(6)},
+              {color: customTheme.colors.black, marginBottom: rs(6)},
             ]}>
             {label}
           </Text>
@@ -59,7 +59,11 @@ const DatePickerInput: React.FC<dateInputProps> = ({
         <TouchableOpacity
           style={[
             styles.container,
-            {borderColor: date ? colors.pink : colors.grey3},
+            {
+              borderColor: date
+                ? customTheme.colors.pink
+                : customTheme.colors.grey3,
+            },
           ]}
           onPress={handleOpenModal}
           activeOpacity={0.6}>
@@ -68,7 +72,11 @@ const DatePickerInput: React.FC<dateInputProps> = ({
             style={[
               typographies.interSemiBold20,
               globalStyles.flexShrink1,
-              {color: !date ? colors.grey3 : colors.grey},
+              {
+                color: !date
+                  ? customTheme.colors.grey3
+                  : customTheme.colors.grey,
+              },
             ]}
             numberOfLines={1}>
             {moment(date).format('DD-MM-yyyy') || placeholder}
@@ -86,7 +94,7 @@ export default DatePickerInput;
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     ...customPadding(17.5, 16, 17.5, 16),
     borderWidth: 1,
     width: '100%',

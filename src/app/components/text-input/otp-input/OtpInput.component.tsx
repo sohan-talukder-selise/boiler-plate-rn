@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useMemo, useRef} from 'react';
 import {StyleSheet, TextInput, View, ViewStyle} from 'react-native';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {customPadding} from '../../../assets/styles/global.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
@@ -60,9 +60,9 @@ const OTPInput: React.FC<_otpInputProps> = ({length = 6, callback, style}) => {
           keyboardType="number-pad"
           placeholder="0"
           autoComplete="one-time-code"
-          placeholderTextColor={colors.light2}
+          placeholderTextColor={customTheme.colors.light2}
           ref={(inputRefs as any)[index]}
-          selectionColor={colors.orange}
+          selectionColor={customTheme.colors.orange}
           selectTextOnFocus
           onFocus={() => handleOnFocus(index)}
           // onBlur={() => handleOnBlur(index)}
@@ -115,15 +115,18 @@ const styles = StyleSheet.create({
   input: {
     borderRadius: rs(15),
     ...typographies.interSemiBold34,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     ...customPadding(7, 10, 7, 9),
     textAlign: 'center',
     justifyContent: 'center',
     borderWidth: 1,
     height: rs(60),
     width: rs(45),
-    borderColor: colors.light2,
+    borderColor: customTheme.colors.light2,
     gap: 9,
   },
-  focus: {borderColor: colors.pink, backgroundColor: colors.pink},
+  focus: {
+    borderColor: customTheme.colors.pink,
+    backgroundColor: customTheme.colors.pink,
+  },
 });

@@ -11,7 +11,7 @@ import {
 import React, {ReactElement, useCallback, useState} from 'react';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {
   customPadding,
   globalStyles,
@@ -100,7 +100,7 @@ const CustomMultipleSelect: React.FC<_props> = ({
           <Text
             style={[
               typographies.interMedium14,
-              {color: colors.black},
+              {color: customTheme.colors.black},
               labelStyle,
             ]}>
             {label}
@@ -118,14 +118,20 @@ const CustomMultipleSelect: React.FC<_props> = ({
             globalStyles.flexShrink1,
             globalStyles.flexGrow1,
             {
-              color: isEmpty(values) ? colors.grey4 : colors.black,
+              color: isEmpty(values)
+                ? customTheme.colors.grey4
+                : customTheme.colors.black,
             },
           ]}
           numberOfLines={1}>
           {!isEmpty(values) ? generateValues(values) : placeholder}
         </Text>
         <View style={{transform: [{rotate: '270deg'}]}}>
-          <ArrowDownIcon height={20} width={20} fill={colors.pink} />
+          <ArrowDownIcon
+            height={20}
+            width={20}
+            fill={customTheme.colors.pink}
+          />
         </View>
       </TouchableOpacity>
     </View>
@@ -137,7 +143,7 @@ export default CustomMultipleSelect;
 const styles = StyleSheet.create({
   textContainer: {
     borderWidth: 1,
-    borderColor: colors.grey3,
+    borderColor: customTheme.colors.grey3,
     flexDirection: 'row',
     gap: 8,
     ...customPadding(17, 16, 17, 16),

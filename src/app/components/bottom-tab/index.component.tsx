@@ -1,5 +1,5 @@
 import React from 'react';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {screens} from '../../routes/routeName.routes';
 import BottomTabBarIcon from './BottomTabBarIcon.routes';
@@ -40,11 +40,11 @@ const BottomTab: React.FC<types> = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: colors.pink,
-        tabBarInactiveTintColor: colors.pink,
+        tabBarActiveTintColor: customTheme.colors.pink,
+        tabBarInactiveTintColor: customTheme.colors.pink,
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          borderTopColor: colors.grey3,
+          borderTopColor: customTheme.colors.grey3,
           borderTopWidth: 1,
           alignItems: 'center',
           ...customPadding(0, 20, 10, 20),

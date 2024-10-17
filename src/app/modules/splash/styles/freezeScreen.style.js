@@ -5,7 +5,7 @@ import {
 } from '../../../assets/styles/global.style.asset';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
 import {fonts} from '../../../assets/styles/fonts.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 import {
   activityHeight,
   getHexaOpacityColorCode,
@@ -20,7 +20,7 @@ export const freezeScreenStyles = StyleSheet.create({
     left: 0,
     height: SCREEN_HEIGHT,
     width: SCREEN_WIDTH,
-    backgroundColor: getHexaOpacityColorCode(colors.gray0, 0.5),
+    backgroundColor: getHexaOpacityColorCode(customTheme.colors.gray0, 0.5),
     zIndex: 1,
   },
   bodyWrp: {...customPadding(20, 20, 0, 20)},
@@ -29,7 +29,7 @@ export const freezeScreenStyles = StyleSheet.create({
     bottom: 0,
     left: 0,
     width: SCREEN_WIDTH,
-    backgroundColor: colors.white,
+    backgroundColor: customTheme.colors.white,
     ...customPadding(20, 20, activityHeight(), 20),
     ...customBorderRadius(12, 12),
     zIndex: 2,
@@ -43,7 +43,7 @@ export const freezeScreenStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   bottomHeader: {gap: 8},
-  des: {...typographies.bodyMedium, color: colors.gray4},
-  desLink: {...typographies.bodyMedium, color: colors.primary},
+  des: {...typographies.bodyMedium, color: customTheme.colors.gray4},
+  desLink: {...typographies.bodyMedium, color: customTheme.colors.primary},
   linkView: {paddingTop: 20},
 });

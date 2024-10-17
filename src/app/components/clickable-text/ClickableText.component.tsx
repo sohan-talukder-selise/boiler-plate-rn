@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TextStyle} from 'react-native';
 import {customPadding} from '../../assets/styles/global.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
 
 interface ClickableTextProps {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     ...customPadding(0, 5, 0, 5),
     ...typographies.interNormal12,
-    color: colors.grey,
+    color: customTheme.colors.grey,
   },
   underline: {textDecorationLine: 'underline'},
 });

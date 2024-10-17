@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import rs from '../../../assets/styles/responsiveSize.style.asset';
-import {colors} from '../../../assets/styles/colors.style.asset';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
 
 export const loginStyles = StyleSheet.create({
   container: {
@@ -17,7 +17,7 @@ export const loginStyles = StyleSheet.create({
   border: {
     flexGrow: 1,
     height: 0.5,
-    backgroundColor: colors.grey3,
+    backgroundColor: customTheme.colors.grey3,
   },
   bottom: {
     gap: rs(20),

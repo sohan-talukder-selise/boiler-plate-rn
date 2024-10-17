@@ -11,7 +11,7 @@ import {
   globalStyles,
 } from '../../assets/styles/global.style.asset';
 import {typographies} from '../../assets/styles/typographies.style.asset';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 interface badge {
   text: string;
   style?: ViewStyle;
@@ -30,8 +30,8 @@ const Badge: React.FC<badge> = ({
   bgColor,
 }) => {
   const styles = badgeStyles(
-    textColor || colors.white,
-    bgColor || colors.green,
+    textColor || customTheme.colors.white,
+    bgColor || customTheme.colors.green,
   );
   return (
     <TouchableOpacity

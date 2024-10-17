@@ -1,6 +1,6 @@
 import React from 'react';
 import {DimensionValue, StyleSheet, View, ViewStyle} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 interface _progressBar {
   width?: DimensionValue;
   style?: ViewStyle;
@@ -26,11 +26,11 @@ const progressBarStyle = (width?: DimensionValue, color?: string) =>
       height: 3,
       flexDirection: 'row',
       width: '100%',
-      backgroundColor: colors.light2,
+      backgroundColor: customTheme.colors.light2,
       borderRadius: 30,
     },
     progressBar: {
-      backgroundColor: color ? color : colors.orange,
+      backgroundColor: color ? color : customTheme.colors.orange,
       borderRadius: 30,
       width: width,
     },

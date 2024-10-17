@@ -1,13 +1,13 @@
 import React from 'react';
 import {Platform, StyleSheet, View} from 'react-native';
-import {colors} from '../../assets/styles/colors.style.asset';
+import {customTheme} from '../../assets/styles/colors.style.asset';
 import {config} from '../../../config';
 import {activityHeight} from '../../helper/utilities/activityHeight.utility';
 interface _activityBar {
   bgColor?: string;
 }
 const CustomActivityBar: React.FC<_activityBar> = ({
-  bgColor = colors.transparent,
+  bgColor = customTheme.colors.transparent,
 }) => {
   const style = activityBarStyle(config.activityHeight, bgColor);
   return <View style={style.container} />;
