@@ -19,16 +19,17 @@ const useCollections = () => {
     }
   }, []);
   useEffect(() => {
-    list.length > 0 &&
-      realm.write(() => {
-        realm.create(modelsName.Collections, {
-          _id: new Date().toString(),
-          name: 'Sohan Talukder',
-          description: 'new', // Optional field
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        });
-      });
+    // list.length > 0 &&
+    // need to update
+    // realm.write(() => {
+    //   realm.create(modelsName.Collections, {
+    //     _id: new Date().toString(),
+    //     name: 'Sohan Talukder',
+    //     description: 'new', // Optional field
+    //     createdAt: new Date(),
+    //     updatedAt: new Date(),
+    //   });
+    // });
     list.length > 0 &&
       setTimeout(() => {
         console.log(realm.objects(modelsName.Collections));

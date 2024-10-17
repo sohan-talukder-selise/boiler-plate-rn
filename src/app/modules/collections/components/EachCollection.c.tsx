@@ -6,7 +6,8 @@ import rs from '../../../assets/styles/responsiveSize.style.asset';
 import ImagePreview from '../../../components/image-preview/Index.component';
 import {typographies} from '../../../assets/styles/typographies.style.asset';
 import {SCREEN_WIDTH} from '../../../assets/ts/core.data';
-import moment from 'moment-timezone';
+import {customTheme} from '../../../assets/styles/colors.style.asset';
+import calculateTime from '../../../helper/utilities/calculateTime.utility';
 interface _props {
   item: _collectionItem;
   index: number;
@@ -26,10 +27,19 @@ const EachCollection: React.FC<_props> = ({item}) => {
         <Text numberOfLines={2} style={[typographies.interSemiBold16]}>
           {title}
         </Text>
-        <View>
-          <Text style={[typographies.interNormal12]}>{totalItems}</Text>
+        <View style={[globalStyles.flexRow, {gap: rs(12)}]}>
           <Text style={[typographies.interNormal12]}>
-            {moment(date).format('DD MMM, YYYY')}
+            {totalItems} {Number(totalItems) > 1 ? 'items' : 'item'}
+          </Text>
+          <View
+            style={{
+              height: rs(1.5),
+              width: rs(1.5),
+              backgroundColor: customTheme.colors.grey,
+            }}
+          />
+          <Text style={[typographies.interNormal12]}>
+            {calculateTime(date)}
           </Text>
         </View>
       </View>

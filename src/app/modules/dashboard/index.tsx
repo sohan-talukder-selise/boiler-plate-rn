@@ -4,7 +4,6 @@ import Container from '../../layout/Container.layout';
 import rs from '../../assets/styles/responsiveSize.style.asset';
 import SolidButton from '../../components/button/solid-button/SolidButton.component';
 import IconButton from '../../components/button/icon-button/IconButton.component';
-import HomeIcon from '../../assets/icons/HomeIcon.assets';
 import InputWithIcon from '../../components/text-input/InputWithIcon.core.component';
 import PasswordTextInput from '../../components/text-input/floating/PasswordTextInput';
 import CustomSwitch from '../../components/switch/CustomSwitch';
@@ -16,6 +15,7 @@ import FloatingTextInput from '../../components/text-input/floating/FloatingText
 import ImagePreview from '../../components/image-preview/Index.component';
 import {globalStyles} from '../../assets/styles/global.style.asset';
 import CustomSelect from '../../components/custom-select/CustomSelect.app';
+import HomeIcon from '../../assets/icons/Home.icon.assets';
 
 const Dashboard = () => {
   return (
