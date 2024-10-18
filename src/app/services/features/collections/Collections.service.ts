@@ -9,7 +9,7 @@ import {
 
 class CollectionsServicesClass {
   // :GET collections list
-  async getList(payload: _isGetting) {
+  async getList(payload?: _isGetting) {
     const {page, perPage} = payload || {
       page: 1,
       perPage: 10,
