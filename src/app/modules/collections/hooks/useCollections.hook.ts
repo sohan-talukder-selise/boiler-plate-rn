@@ -11,16 +11,16 @@ const useCollections = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const realm = useRealm();
-  const data = useQuery(CollectionsModel);
+  const realmData = useQuery(CollectionsModel);
   const {isLoading, refreshing, hasMore, list, firstRender} =
     useSelector(collectionStates);
   useLayoutEffect(() => {
-    if (!firstRender && data?.length !== 0) {
+    if (!firstRender && realmData?.length === 0) {
       dispatch(getCollectionsList());
     }
   }, []);
   useEffect(() => {
-    data.length > 0 &&
+    realmData.length === 0 &&
       // need to update
       realm.write(() => {
         for (let i of list) {
@@ -33,7 +33,7 @@ const useCollections = () => {
     isLoading,
     refreshing,
     hasMore,
-    list: data || list,
+    list: realmData.length > 0 ? realmData : list,
   };
 };
 
