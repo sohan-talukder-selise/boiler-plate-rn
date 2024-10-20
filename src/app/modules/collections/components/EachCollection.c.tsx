@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {globalStyles} from '../../../assets/styles/global.style.asset';
 import {_collectionItem} from '../types/collection.types';
@@ -15,7 +15,8 @@ interface _props {
 const EachCollection: React.FC<_props> = ({item}) => {
   const {images, title, date, totalItems} = item;
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.7}
       style={[
         globalStyles.flexGrow1,
         {width: SCREEN_WIDTH / 2 - (rs(40) || 0)},
@@ -43,7 +44,7 @@ const EachCollection: React.FC<_props> = ({item}) => {
           </Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
