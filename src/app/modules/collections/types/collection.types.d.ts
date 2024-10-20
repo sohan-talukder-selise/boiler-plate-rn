@@ -1,7 +1,7 @@
 type _collectionItem = {
   _id: string;
   title: string;
-  date: Date;
+  date: string;
   totalItems: string;
   images: _Image[];
 };

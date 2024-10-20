@@ -16,7 +16,7 @@ const initialState: _commonStatesP = {
 };
 export const getCollectionsList = createAsyncThunk(
   `${sliceName.collections}/list`,
-  async (obj: _isGetting) => {
+  async (obj?: _isGetting) => {
     return CollectionsServices.getList(obj);
   },
 );

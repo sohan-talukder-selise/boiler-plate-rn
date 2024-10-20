@@ -22,7 +22,11 @@ const BottomTab: React.FC<types> = () => {
           options={{
             // eslint-disable-next-line react/no-unstable-nested-components
             tabBarIcon: ({focused}) => (
-              <BottomTabBarIcon Icon={item.Icon} focused={focused} />
+              <BottomTabBarIcon
+                name={item.name}
+                Icon={item.Icon}
+                focused={focused}
+              />
             ),
             lazy: true,
           }}
@@ -48,7 +52,7 @@ const BottomTab: React.FC<types> = () => {
           borderTopWidth: 1,
           alignItems: 'center',
           ...customPadding(0, 20, 10, 20),
-          height: rs(72),
+          height: rs(85),
           backgroundColor: customTheme.colors.surface_dark,
         },
       }}>
